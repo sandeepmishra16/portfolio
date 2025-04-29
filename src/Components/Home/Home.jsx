@@ -5,16 +5,18 @@ import { MdFileDownload } from "react-icons/md";
 const Home = () => {
 
   const resume = () => {
-    const resumeUrl = "/Mishra.pdf";
+    const resumeUrl = `${import.meta.env.BASE_URL}Mishra.pdf`;
+  
     window.open(resumeUrl, "_blank");
-
+  
     const link = document.createElement("a");
     link.href = resumeUrl;
-    link.download = "Mishra.pdf"; 
+    link.download = "Mishra.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
+  
 
   return (
 
